@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         name = "Phan Manh Tung",
         className = "126LTDD02",
         email = "12415053122347@sv.ute.udn.vn",
+        phone = "0822323581",
         gpa = 3.8
     )
 
