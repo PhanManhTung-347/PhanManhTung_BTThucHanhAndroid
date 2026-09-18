@@ -2,6 +2,7 @@ package com.example.phanmanhtung_thuchanhandroid.utils
 
 import android.content.Context
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 
 fun Double.toAcademicRanking(): String {
     return when {
@@ -18,4 +19,16 @@ fun Context.toast(message: String) {
         message,
         Toast.LENGTH_SHORT
     ).show()
+}
+fun Context.showConfirmDialog(title: String, message: String, onConfirm: () -> Unit) {
+
+    AlertDialog.Builder(this)
+        .setTitle(title)
+        .setMessage(message)
+        .setPositiveButton("Đồng ý") { _, _ ->
+
+            onConfirm()
+        }
+        .setNegativeButton("Hủy", null)
+        .show()
 }
